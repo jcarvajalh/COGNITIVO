@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cognitivo</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* evita scroll lateral y vertical */
+}
+
+
+    body {
+      background: linear-gradient(-45deg, #000000, #0d0d0d, #1a1a1a, #000000);
+      background-size: 400% 400%;
+      animation: backgroundShift 20s ease infinite;
+      font-family: "Montserrat", sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      text-align: center;
+    }
+
+    @keyframes backgroundShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .logo {
+      position: absolute;
+      top: 2.5rem;
+      left: 2.5rem;
+      width: 200px;
+    }
+
+    .glow {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.4),
+                   0 0 20px rgba(255,255,255,0.3);
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin: 0;
+      padding: 0 1rem;
+    }
+
+    p {
+      color: #818181;
+      font-size: 1.2rem;
+      font-weight: 300;
+      padding: 0 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .decor-line {
+      width: 100px;
+      height: 2px;
+      background: linear-gradient(to right, #ffffff00, #ffffff, #ffffff00);
+      margin: 1rem auto;
+    }
+
+    .blob-blur {
+      position: absolute;
+      background-color: #1db837;
+      opacity: 0.2;
+      filter: blur(90px);
+      width: 300px;
+      height: 280px;
+      border-radius: 55% 45% 60% 40% / 60% 40% 55% 45%;
+      z-index: 0;
+      transform: rotate(100deg);
+    }
+
+    .blob-left {
+    top: 15%;
+    left: -5%;
+}
+.blob-right {
+    bottom: 10%;
+    right: -5%;
+}
+
+
+    /* ------------------------ */
+    /* 🎯 MEDIA QUERIES        */
+    /* ------------------------ */
+    @media (max-width: 768px) {
+      .logo {
+        width: 150px;
+        top: 1rem;
+        left: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .blob-blur {
+        width: 220px;
+        height: 200px;
+        filter: blur(60px);
+        max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    pointer-events: none; /* para que no interfieran con toques en móviles */
+      }
+
+      .blob-left {
+    top: 15%;
+    left: -5%;
+}
+.blob-right {
+    bottom: 10%;
+    right: -5%;
+}
+
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        width: 130px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+
+      .decor-line {
+        width: 60px;
+      }
+
+      .blob-blur {
+        width: 180px;
+        height: 180px;
+        filter: blur(50px);
+        max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    pointer-events: none; /* para que no interfieran con toques en móviles */
+      }
+
+      .blob-left {
+    top: 15%;
+    left: -5%;
+}
+.blob-right {
+    bottom: 10%;
+    right: -5%;
+}
+
+
+    }
+  </style>
+</head>
+<body>
+  <img src="images/logo.png" alt="Cognitivo Logo" class="logo" />
+  <div class="blob-blur blob-left"></div>
+  <div class="blob-blur blob-right"></div>
+
+  <h1 class="glow">¡ESTAMOS EN CONSTRUCCIÓN!</h1>
+  <div class="decor-line"></div>
+  <p>Muy pronto podrás conocer nuestro nuevo sitio web.</p>
+</body>
+</html>
